@@ -27,7 +27,6 @@ class TodoRepositoryImpl(
             )
             userTodosRef.child(id).updateChildren(updates).await()
         } else {
-            // It's a new item
             val todoId = userTodosRef.push().key!!
             val todo = TodoEntity(todoId, title, description, false, userId)
             userTodosRef.child(todoId).setValue(todo).await()
