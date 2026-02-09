@@ -11,7 +11,7 @@ Este é um aplicativo de Lista de Tarefas para Android construído com Jetpack C
     *   Edite tarefas existentes.
     *   Marque tarefas como concluídas/não concluídas.
     *   Exclua tarefas.
-*   **Armazenamento Persistente:** As tarefas são armazenadas no Google Cloud Firestore, garantindo a persistência dos dados entre sessões e dispositivos.
+*   **Armazenamento Persistente:** As tarefas são armazenadas no Firebase Realtime Database, garantindo a persistência dos dados entre sessões e dispositivos.
 
 ## Telas
 
@@ -27,11 +27,11 @@ O aplicativo é composto pelas seguintes telas principais:
 O projeto segue uma arquitetura modular e escalável:
 
 *   **MVVM (Model-View-ViewModel):**
-    *   **Model:** `TodoEntity.kt` (representação de dados para Firestore), `Todo.kt` (modelo de domínio).
+    *   **Model:** `TodoEntity.kt` (representação de dados para Firebase Realtime Database), `Todo.kt` (modelo de domínio).
     *   **View:** Componentes de UI do Jetpack Compose (`LoginScreen.kt`, `SignupScreen.kt`, `ListScreen.kt`, `AddEditScreen.kt`). Estes observam o estado do `ViewModel`.
     *   **ViewModel:** (`LoginViewModel.kt`, `SignupViewModel.kt`, `ListViewModel.kt`, `AddEditViewModel.kt`). Estes contêm dados e lógica relacionados à UI, interagindo com repositórios.
 *   **Padrão Repositório:**
-    *   `TodoRepository.kt` (interface que define operações de dados) e `TodoRepositoryImpl.kt` (implementação usando Firestore). Isso abstrai as fontes de dados dos `ViewModel`s.
+    *   `TodoRepository.kt` (interface que define operações de dados) e `TodoRepositoryImpl.kt` (implementação usando Firebase Realtime Database). Isso abstrai as fontes de dados dos `ViewModel`s.
     *   `FirebaseAuthRepository.kt`: Lida com todas as operações de autenticação do Firebase, fornecendo uma interface limpa para a lógica de autenticação.
 *   **Navegação:** Usa Jetpack Compose Navigation (`TodoNavHost.kt`) para gerenciar a navegação entre as diferentes telas.
 *   **Injeção de Dependências:** Usa implicitamente a injeção de construtor para `ViewModel`s e repositórios, facilitando testes e manutenibilidade.
@@ -41,6 +41,13 @@ O projeto segue uma arquitetura modular e escalável:
 *   **Kotlin:** Linguagem de programação principal.
 *   **Jetpack Compose:** Kit de ferramentas moderno para UI do Android para construção de interfaces de usuário nativas.
 *   **Firebase Authentication:** Para registro e login de usuários.
-*   **Firebase Firestore:** Banco de dados em nuvem NoSQL para armazenar tarefas.
+*   **Firebase Realtime Database:** Banco de dados em nuvem NoSQL para armazenar tarefas.
 *   **Componentes de Arquitetura Android:** ViewModel, Navigation.
 *   **Coroutines e Flow:** Para operações assíncronas e fluxos de dados reativos.
+
+## Autores
+
+- **Enzo Tavares** – Matrícula: 12321BSI288
+- **Luiz Alexandre** – Matrícula: 12211GIN008
+
+**Disciplina:** Programação para Dispositivos Móveis - UFU
