@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "605154381126",
+    "project_id": "fir-authtodolist",
+    "storage_bucket": "fir-authtodolist.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605154381126:android:0418724b0f90d170c66947",
+        "android_client_info": {
+          "package_name": "com.example.firebaseauthtodolist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq-rGrE9oqjdRVSyDh3PW4z8y6Zk0IywY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
