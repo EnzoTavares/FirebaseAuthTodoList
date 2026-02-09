@@ -13,10 +13,14 @@ import kotlinx.coroutines.tasks.await
 class TodoRepositoryImpl(
     private val db: FirebaseDatabase
 ) : TodoRepository {
+    /** gemini-2.5-pro - início
+     * Prompt: As a professional Kotlin developer, help me switching my room DB to my recently created realtime database from firebase.
+     *
+     */
+
     override suspend fun insert(title: String, description: String?, id: String?, userId: String) {
         val userTodosRef = db.reference.child("todos").child(userId)
         if (id != null) {
-            // It's an update, just update title and description
             val updates = mapOf<String, Any?>(
                 "title" to title,
                 "description" to description
@@ -77,4 +81,5 @@ class TodoRepositoryImpl(
             )
         }
     }
+    /** gemini-2.5-pro - final */
 }
